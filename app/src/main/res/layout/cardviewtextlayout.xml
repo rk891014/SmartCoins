@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="carddata"
+            type="com.example.myapplication.CardsData" />
+
+    </data>
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/planEveryDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{carddata.heading}"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    />
+                <TextView
+                    android:id="@+id/winRewards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{carddata.subHeading}"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    />
+                <TextView
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{carddata.buttonText}"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    android:padding="10dp"
+                    android:background="@drawable/task_background"
+                    android:backgroundTint='@{carddata.buttonText == "SPIN NOW" ? @color/blue : @color/golden}'
+                    />
+            </LinearLayout>
+</layout>
